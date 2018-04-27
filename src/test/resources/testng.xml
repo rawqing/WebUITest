@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test suite">
+    <test name="one test">
+        <parameter name="a" value="1"/>
+        <parameter name="b" value="2"/>
+        <parameter name="c" value="3"/>
+        <classes>
+            <class name="com.yq.testcases.FirstTest"/>
+        </classes>
+    </test>
+</suite>
