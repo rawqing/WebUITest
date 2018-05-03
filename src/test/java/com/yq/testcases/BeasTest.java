@@ -19,7 +19,10 @@ public class BeasTest {
     protected WebDriver driver ;
 
     public BeasTest(){
-        System.setProperty("webdriver.gecko.driver", "libs/geckodriver");
+        // 不同的操作系统需区别设置不同的driver
+        System.setProperty("webdriver.gecko.driver", "libs/geckodriver.exe");
+        System.setProperty("webdriver.firefox.bin", "E:\\program\\Firefox\\firefox.exe");
+
 
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
