@@ -1,20 +1,16 @@
 package com.yq.testcases.login;
 
-import com.yq.testcases.BeasTest;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import com.yq.testcases.BaseTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by king on 2018/4/14.
  */
-public class LoginTest extends BeasTest{
+public class LoginTest extends BaseTest {
 
     LoginService la = new LoginAction(driver);
-
+    LoginView lv = la.gainView();
 
     @DataProvider
     public Object[][] login_data(){
@@ -26,10 +22,8 @@ public class LoginTest extends BeasTest{
 
     @Test(dataProvider = "login_data")
     public void test_login(String email, String pwd ,String alert) {
+        lv.email_input.sendKeys(email);
+        lv.pwd_input.sendKeys(pwd);
 
-        la.type_email(email);
-        la.type_password(pwd);
-        la.click_submit();
-        la.check_alert(alert);
     }
 }

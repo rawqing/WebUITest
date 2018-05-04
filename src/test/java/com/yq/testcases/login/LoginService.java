@@ -1,9 +1,11 @@
 package com.yq.testcases.login;
 
+import com.yq.testcases.GainService;
+
 /**
  * Created by king on 2018/4/14.
  */
-public interface LoginService {
+public interface LoginService extends GainService<LoginView> {
 
     /**
      * 输入指定的用户名

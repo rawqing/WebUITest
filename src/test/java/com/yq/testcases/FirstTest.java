@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 /**
  * Created by king on 2018/4/14.
  */
-public class FirstTest extends BeasTest{
+public class FirstTest extends BaseTest {
 
 
     @Test

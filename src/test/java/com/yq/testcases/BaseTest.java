@@ -14,11 +14,11 @@ import static java.lang.Thread.sleep;
 /**
  * Created by king on 2018/4/14.
  */
-public class BeasTest {
+public class BaseTest {
     protected Calc calc = null;
     protected WebDriver driver ;
 
-    public BeasTest(){
+    public BaseTest(){
         // 不同的操作系统需区别设置不同的driver
         System.setProperty("webdriver.gecko.driver", "libs/geckodriver.exe");
         System.setProperty("webdriver.firefox.bin", "E:\\program\\Firefox\\firefox.exe");

@@ -11,6 +11,11 @@ public class LoginAction implements LoginService{
     WebDriver driver ;
     LoginView lv ;
 
+    @Override
+    public LoginView gainView(){
+        return lv;
+    }
+
     public LoginAction(WebDriver driver) {
         this.driver = driver;
         this.lv = PageFactory.initElements(driver ,LoginView.class);
